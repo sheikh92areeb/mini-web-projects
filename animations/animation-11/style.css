@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #6767f0;
+}
+.container {
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    position: relative;
+}
+.cane {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    height: 500px;
+    --left : 230px;
+    background: yellow;
+    transition: 1s;
+    z-index: 2;
+}
+.pack {
+    position: absolute;
+    background: var(--bg) var(--left), url('img/mockup.png');
+    background-size: auto 100%;
+    width: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 2/4;
+    mask-image: url('img/mockup.png');
+    mask-size: auto 100%;
+    background-blend-mode: multiply;
+    transition: 1s;
+}
+.cane:hover {
+    --left: -1000px;
+    transform: translate(-50%) translateY(-60%);
+}
+.cane .pack:nth-child(2) {
+    opacity: 0;
+}
+.cane:hover .pack:nth-child(2) {
+    opacity: 1;
+}
