@@ -1,0 +1,401 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --title-color: hsl(0, 0%, 95%);
+  --text-color: hsl(0, 0%, 70%);
+  --text-color-light: hsl(0, 0%, 60%);
+  --body-color: hsl(0, 0%, 0%);
+  --container-color: hsl(0, 0%, 8%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Montserrat", sans-serif;
+  --biggest-font-size: 2.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1440px) {
+  :root {
+    --biggest-font-size: 5.5rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.main {
+  overflow: hidden; /* For animation ScrollReveal */
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-semi-bold);
+}
+
+.nav__list {
+  text-align: center;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav__link {
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-medium);
+}
+
+.nav__link::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: var(--title-color);
+  position: absolute;
+  left: 0;
+  bottom: -.4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav__link:hover::after {
+  width: 80%;
+}
+
+
+
+.nav__toggle,
+.nav__close {
+  display: none;
+}
+
+/* Navigation for mobile devices */
+
+
+/* Show menu */
+
+
+/* Add blur to header */
+.blur-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, .5);
+  backdrop-filter: blur(24px);
+  --webkit-backdrop-filter: blur(24px); /* for safari */
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+
+/* Active link */
+
+
+/*=============== HOME ===============*/
+.home {
+  position: relative;
+}
+
+.home__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 750px;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.home__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(180deg, hsla(0,0%,0%,0) 58%, hsla(0,0%,0%,0.9) 78%);
+}
+
+.home__container {
+  grid-template-columns: initial;
+  justify-content: initial;
+  row-gap: 4rem;
+  padding-top: 6rem;
+}
+
+.home__data {
+  text-align: initial;
+  width: 480px;
+}
+
+.home__subtitle {
+  font-size: var(--h2-font-size);
+  margin-bottom: .5rem;
+}
+
+.home__title {
+  font-size: calc(var(--biggest-font-size) * 1.5);
+  margin-bottom: 1rem;
+}
+
+.home__description {
+  margin-bottom: 2.5rem;
+  color: var(--title-color);
+}
+
+.home__cards {
+  grid-template-columns: repeat(4, 260px);
+  justify-content: center;
+}
+
+.home__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.home__card-img {
+  transition: transform .4s;
+}
+
+.home__card-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, hsla(0,0%,0%,0) 50%, hsl(0,0%,0%) 125%);
+}
+
+.home__card-title {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  font-size: var(--h3-font-size);
+  z-index: 1;
+}
+
+.home__card:hover .home__card-img {
+  transform: scale(1.2);
+}
+
+/*=============== BUTTON ===============*/
+.button {
+  background-color: hsla(0,0%,100%,.2);
+  padding: 1.25rem 1.5rem;
+  color: var(--title-color);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 1.5rem;
+  font-family: var(--second-font);
+  font-weight: var(--font-semi-bold);
+  backdrop-filter: blur(24px);
+  --webkit-backdrop-filter: blur(24px); /* for safari */
+}
+
+.button i {
+  font-size: 1.25rem;
+  transition: transform .4s;
+  font-weight: initial;
+}
+
+.button:hover i {
+  transform: translateX(.25rem);
+}
+
+/*=============== ABOUT ===============*/
+.about__container {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  padding-block: 1rem;
+}
+
+.about__data {
+  text-align: center;
+  align-items: center;
+}
+
+.about__description {
+  margin-bottom: 3rem;
+}
+
+.about__image {
+  position: relative;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.about__img {
+  width: 100%;
+  transition: transform .4s;
+}
+
+.about__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, hsla(0,0%,0%,0) 50%, hsl(0,0%,0%) 125%);
+}
+
+.about__image:hover .about__img {
+  transform: scale(1.2);
+}
+/*=============== POPULAR ===============*/
+
+
+/*=============== EXPLORE ===============*/
+
+
+/*=============== JOIN ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(0,0%,10%);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: .5rem;
+  background-color: hsl(0,0%,20%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0,0%,30%);
+}
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up */
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
