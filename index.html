@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Components & Mini Prototypes | HTML CSS JS | Areeb Sheikh</title>
-    <link rel="stylesheet" href="./src/output.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Components & Mini Prototypes | HTML CSS JS | Areeb Sheikh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./src/output.css">
 </head>
+
 <body class="bg-gray-100">
-    <header class="w-full px-20 py-2 shadow-xl">
-        <div class="logo text-blue-500">
-            <h1 class="text-3xl font-bold">ProtoWall</h1>
-        </div>
-    </header>
+  <header class="w-full px-5 sm:px-10 md:px-20 py-2 shadow-xl">
+    <div class="logo text-blue-500">
+      <h1 class="text-3xl font-bold">ProtoWall</h1>
+    </div>
+  </header>
 
-    <main class="min-h-[90vh] w-full">
-        <section class="hero w-full h-[250px]">
-            <div class="w-full h-full bg-cover bg-center bg-no-repeat" style="background:linear-gradient(270deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('./src/hero.jpg');">
-                hero
-            </div>
-        </section>
+  <main class="min-h-[90vh] w-full">    
+    <section class="hero w-full h-[250px]">
+      <div class="w-full h-full bg-cover bg-center bg-no-repeat text-gray-50 flex flex-col items-center justify-center px-5 sm:px-10"
+        style="background:linear-gradient(270deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('./src/hero.jpg');"
+      >
+        <h2 class="text-3xl sm:text-4xl text-center font-bold mb-4">Welcome to ProtoWall</h2>
+        <p class="text-center">Explore Many pre built web components and prototypes on HTML CSS and JS</p>
+        <button class="bg-blue-500 max-sm:text-sm px-4 py-2 mt-4 rounded-lg cursor-pointer group">
+          <a href="#components">
+            Scroll Down
+            <i class="fa-solid fa-circle-down group-hover:animate-bounce"></i>
+          </a>
+        </button>
+      </div>
+    </section>
 
-        <section class="components w-full px-20">
-            Components
-        </section>
+    <section class="components w-full px-5 sm:px-10 md:px-20 py-8" id="components">
+      <div class="section-title mb-4">
+        <h3 class="text-3xl text-blue-500 font-medium">Components</h3>
+      </div>
 
-    </main>
+      <div class="section-content">
+        content
+      </div>
+    </section>
+  </main>
 
-    <footer class="bg-blue-500 text-gray-100 py-1 px-10">
-        <p class="text-center text-sm">Designed & Copyrights &copy; by <span class="cursor-pointer hover:underline">Areeb Sheikh</span>, All Rights Reserved</p>
-    </footer>
+  <footer class="bg-blue-500 text-gray-50 py-1 px-10">
+    <p class="text-center text-sm">
+      Designed & Copyrights &copy; by 
+      <span class="cursor-pointer hover:underline">Areeb Sheikh</span>, 
+      All Rights Reserved
+    </p>
+  </footer>
 </body>
+
 </html>
