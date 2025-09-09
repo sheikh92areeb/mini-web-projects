@@ -1,0 +1,26 @@
+{
+  "name": "mini-web-projects",
+  "version": "1.0.0",
+  "description": "A collection of small, creative web development projects built using **HTML, CSS, and JavaScript**. This repository features various UI components and animations, making it a great resource for frontend developers looking to practice and enhance their skills. 🚀",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheikh92areeb/mini-web-projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sheikh92areeb/mini-web-projects/issues"
+  },
+  "homepage": "https://github.com/sheikh92areeb/mini-web-projects#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
