@@ -24,8 +24,8 @@ document.querySelectorAll('.dropdown-toggle').forEach(button => {
       button.setAttribute('aria-expanded', expanded);
 
       // if there are caret icons, toggle them too (optional)
-      const caretRight = button.querySelector('.fa-caret-right');
-      const caretDown  = button.querySelector('.fa-caret-down');
+      const caretRight = button.getElementsByTagName('span').querySelector('.fa-caret-right');
+      const caretDown  = button.getElementsByTagName('span').querySelector('.fa-caret-down');
       if (caretRight && caretDown) {
         caretRight.classList.toggle('hidden', expanded);
         caretDown.classList.toggle('hidden', !expanded);
