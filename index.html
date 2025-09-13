@@ -38,32 +38,51 @@
       </div>
 
       <div class="section-content">
-        <div class="flex gap-4">
-          <div class="sidebar flex-1 bg-white pb-2">
+        <div class="">
+          <div class="sidebar bg-white pb-2">
             <h4 class="w-full text-xl border-b px-4 py-2 mb-2">All Components</h4>
-            <ul id="sidebar-list">
-              <li class="bg-gray-300 text-gray-800 px-4 py-2 cursor-pointer mb-2 hover:shadow-sm shadow-gray-800 transition-shadow duration-500">Buttons</li>
-              <li class="bg-gray-300 text-gray-800 px-4 py-2 cursor-pointer mb-2 hover:shadow-sm shadow-gray-800 transition-shadow duration-500">Cards</li>
-              <li class="bg-gray-300 text-gray-800 px-4 py-2 cursor-pointer mb-2 hover:shadow-sm shadow-gray-800 transition-shadow duration-500">Navbars</li>
-            </ul>
-          </div>
+            <ul id="list" class="w-full">
+              <li class="bg-gray-300 mb-3 rounded-md">
+                <button
+                  type="button"
+                  class="dropdown-toggle w-full text-gray-800 text-lg font-medium flex items-center justify-between px-4 py-2 cursor-pointer hover:shadow-md transition-shadow duration-300"
+                  aria-expanded="false"
+                >
+                  Buttons
+                  <span class="ml-2">
+                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="fa-solid fa-caret-down hidden"></i>
+                  </span>
+                </button>
 
-          <div class="section-grid flex-3 bg-white">
-            <h4 class="w-full text-xl border-b px-4 py-2 mb-2">All Components</h4>
-            <div class="grid grid-cols-3 gap-3 px-4">
-              <div class="card bg-gray-200">
-                card
-              </div>
-              <div class="card bg-gray-200">
-                card
-              </div>
-              <div class="card bg-gray-200">
-                card
-              </div>
-            </div>
-          </div>
+                <!-- dropdown: hidden by default -->
+                <div class="dropdown bg-gray-200 px-4 py-3 hidden">
+                  <!-- IMPORTANT: grid is applied to this element -->
+                  <ul class="dropdown-list grid grid-cols-4 gap-2 list-none p-0 m-0">
+                    <li class="dropdown-item inline px-2 py-2 rounded hover:bg-gray-300 text-center">Button 1</li>
+                    <li class="dropdown-item inline px-2 py-2 rounded hover:bg-gray-300 text-center">Button 2</li>
+                    <li class="dropdown-item inline px-2 py-2 rounded hover:bg-gray-300 text-center">Button 3</li>
+                    <li class="dropdown-item inline px-2 py-2 rounded hover:bg-gray-300 text-center">Button 4</li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- Example of second dropdown to show multiple working -->
+              <li class="bg-gray-300 mb-3 rounded-md">
+                <button class="dropdown-toggle w-full text-left px-4 py-2">More</button>
+                <div class="dropdown bg-gray-200 px-4 py-3 hidden">
+                  <ul class="dropdown-list grid grid-cols-2 gap-2 list-none p-0 m-0">
+                    <li class="block px-2 py-2 rounded hover:bg-gray-300 text-center">A</li>
+                    <li class="block px-2 py-2 rounded hover:bg-gray-300 text-center">B</li>
+                    <li class="block px-2 py-2 rounded hover:bg-gray-300 text-center">C</li>
+                    <li class="block px-2 py-2 rounded hover:bg-gray-300 text-center">D</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>                  
         </div>
-      </div>
+      </div>  
     </section>
   </main>
 
@@ -74,6 +93,8 @@
       All Rights Reserved
     </p>
   </footer>
+
+  <script src="./src/js/app.js"></script>
 </body>
 
 </html>
