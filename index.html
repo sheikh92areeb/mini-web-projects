@@ -41,6 +41,8 @@
         <div class="">
           <div class="sidebar bg-white pb-2">
             <h4 class="w-full text-xl border-b px-4 py-2 mb-2">All Components</h4>
+
+            <!-- Components List -->
             <ul id="list" class="w-full">
               <li class="bg-gray-300 mb-3 rounded-md">
                 <button
@@ -50,36 +52,22 @@
                 >
                   Buttons
                   <span class="ml-2">
-                    <i class="fa-solid fa-caret-right"></i>
-                    <i class="fa-solid fa-caret-down hidden"></i>
+                    <i class="fa-solid fa-caret-right"></i>                    
                   </span>
                 </button>
 
                 <!-- dropdown: hidden by default -->
-                <div class="dropdown bg-gray-200 px-4 py-3 hidden">
+                <div class="dropdown w-full bg-gray-200 px-4 py-3 hidden">
                   <!-- IMPORTANT: grid is applied to this element -->
-                  <ul class="dropdown-list grid grid-cols-4 gap-2 list-none p-0 m-0">
-                    <li class="dropdown-item inline px-2 py-2 rounded hover:bg-gray-300 text-center">Button 1</li>
-                    <li class="dropdown-item inline px-2 py-2 rounded hover:bg-gray-300 text-center">Button 2</li>
-                    <li class="dropdown-item inline px-2 py-2 rounded hover:bg-gray-300 text-center">Button 3</li>
-                    <li class="dropdown-item inline px-2 py-2 rounded hover:bg-gray-300 text-center">Button 4</li>
+                  <ul class="dropdown-list w-full list-none p-0 m-0">
+                    <li class="dropdown-item w-full px-2 py-2 rounded hover:bg-gray-300">
+                      <a href="" class="w-full block">Button 1</a>
+                    </li>                    
                   </ul>
                 </div>
-              </li>
-
-              <!-- Example of second dropdown to show multiple working -->
-              <li class="bg-gray-300 mb-3 rounded-md">
-                <button class="dropdown-toggle w-full text-left px-4 py-2">More</button>
-                <div class="dropdown bg-gray-200 px-4 py-3 hidden">
-                  <ul class="dropdown-list grid grid-cols-2 gap-2 list-none p-0 m-0">
-                    <li class="block px-2 py-2 rounded hover:bg-gray-300 text-center">A</li>
-                    <li class="block px-2 py-2 rounded hover:bg-gray-300 text-center">B</li>
-                    <li class="block px-2 py-2 rounded hover:bg-gray-300 text-center">C</li>
-                    <li class="block px-2 py-2 rounded hover:bg-gray-300 text-center">D</li>
-                  </ul>
-                </div>
-              </li>
+              </li>              
             </ul>
+
           </div>                  
         </div>
       </div>  

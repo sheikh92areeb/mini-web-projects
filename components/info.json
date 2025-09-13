@@ -1,0 +1,18 @@
+[
+    {"name":"animations", "items": ["animation-1","animation-2","animation-3","animation-4","animation-5","animation-6","animation-7","animation-8","animation-9","animation-10","animation-11"]},
+    {"name":"buttons", "items": ["button-1", "button-2", "button-3", "button-4"]},
+    {"name":"cards", "items": ["card-1", "card-2", "card-3", "card-4", "card-5", "card-6", "card-7", "card-8", "card-9", "card-10"]},
+    {"name":"footers", "items": ["footer-1", "footer-2"]},
+    {"name":"forms", "items": ["form-1", "form-2", "form-3", "form-4", "form-5", "form-6"]},
+    {"name":"hovers", "items": ["hover-1", "hover-2", "hover-3", "hover-4", "hover-5", "hover-6", "hover-7"]},
+    {"name":"loaders", "items": ["loader-1", "loader-2"]},
+    {"name":"modals", "items": ["modal-1"]},
+    {"name":"navbars", "items": ["navbar-1", "navbar-2", "navbar-3"]},
+    {"name":"parallaxes", "items": ["parallax-1"]},
+    {"name":"search-boxes", "items": ["search-box-1"]},
+    {"name":"side-bars", "items": ["side-bar-1", "side-bar-2", "side-bar-3"]},
+    {"name":"skill-bars", "items": ["skill-bar-1"]},
+    {"name":"sliders", "items": ["slider-1", "slider-2"]},
+    {"name":"tabs", "items": ["tab-1"]},
+    {"name":"web-pages", "items": ["web-page-1", "web-page-2", "web-page-3", "web-page-4", "web-page-5", "web-page-6", "web-page-7", "web-page-8", "web-page-9", "web-page-10", "web-page-11", "web-page-12"]}
+]
